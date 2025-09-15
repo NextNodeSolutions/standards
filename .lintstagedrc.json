@@ -1,5 +1,5 @@
 {
-  "*.{js,jsx,ts,tsx}": ["biome lint --write"],
-  "package.json": ["better-sort-package-json"],
-  "*.{json,md,yml,yaml}": ["prettier --write"]
+	"*.{js,jsx,ts,tsx}": ["pnpm lint"],
+	"package.json": ["better-sort-package-json"],
+	"*.{json,md,yml,yaml}": ["pnpm format"]
 }
