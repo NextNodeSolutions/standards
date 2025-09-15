@@ -1,5 +1,4 @@
 {
-	"*.{js,jsx,ts,tsx}": ["pnpm lint"],
 	"package.json": ["better-sort-package-json"],
-	"*.{json,md,yml,yaml}": ["pnpm format"]
+	"*": ["pnpm lint", "pnpm format"]
 }

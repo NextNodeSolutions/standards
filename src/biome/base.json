@@ -7,12 +7,28 @@
 			"**/*.js",
 			"**/*.jsx",
 			"**/*.mjs",
-			"**/*.cjs"
+			"**/*.cjs",
+			"**/*.json",
+			"**/*.jsonc"
 		],
 		"ignoreUnknown": true
 	},
 	"formatter": {
-		"enabled": true
+		"enabled": false
+	},
+	"json": {
+		"formatter": {
+			"enabled": true,
+			"indentStyle": "tab",
+			"indentWidth": 4,
+			"lineEnding": "lf",
+			"lineWidth": 100,
+			"trailingCommas": "none"
+		},
+		"parser": {
+			"allowComments": false,
+			"allowTrailingCommas": false
+		}
 	},
 	"linter": {
 		"enabled": true,
