@@ -1,5 +1,13 @@
 # @nextnode/standards
 
+## 2.0.2
+
+### Patch Changes
+
+- [#6](https://github.com/NextNodeSolutions/standards/pull/6) [`89072e4`](https://github.com/NextNodeSolutions/standards/commit/89072e41a044a2aeb0225533f854079d746f3e20) Thanks [@walid-mos](https://github.com/walid-mos)! - Fix Biome JSON parser to allow comments in tsconfig.json files
+
+    Add override configuration in Biome to allow comments specifically for tsconfig\*.json files while maintaining strict JSON parsing for all other JSON files. This resolves parsing errors with TypeScript configuration files that use comments.
+
 ## 2.0.1
 
 ### Patch Changes
