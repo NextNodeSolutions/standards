@@ -165,6 +165,15 @@
 					}
 				}
 			}
+		},
+		{
+			"includes": ["**/tsconfig*.json"],
+			"json": {
+				"parser": {
+					"allowComments": true,
+					"allowTrailingCommas": false
+				}
+			}
 		}
 	]
 }
