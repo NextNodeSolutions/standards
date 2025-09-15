@@ -1,139 +1,144 @@
-# 
+# @nextnode/standards
 
-A TypeScript client library for Nextnode Functions, designed to simplify function execution and API interactions.
+Standards de développement NextNode : configurations unifiées pour le formatting, linting et style de code.
+
+## Description
+
+Ce package centralise toutes les configurations de qualité de code utilisées dans l'écosystème NextNode, permettant une maintenance centralisée et une cohérence garantie entre tous les projets.
 
 ## Installation
 
 ```bash
-npm install 
+pnpm add -D @nextnode/standards
 ```
 
-Or with pnpm:
+## Utilisation
 
-```bash
-pnpm add 
+### Biome (projets TypeScript)
+
+Pour les projets TypeScript utilisant Biome comme linter, créez un fichier `biome.json` :
+
+```json
+{
+  "extends": ["@nextnode/standards/biome"]
+}
 ```
 
-## Usage
+**Projets concernés** : logger, config-manager, http-client, functions-client, project-templates, validation, eslint-plugin
 
-### Basic Setup
+### Prettier standard
 
-```typescript
-import { NextnodeClient } from '';
+Pour les projets utilisant Prettier sans Astro, ajoutez dans votre `package.json` :
 
-// Initialize the client
-const client = new NextnodeClient({
-  apiKey: 'your-api-key',
-  baseUrl: 'https://api.nextnode.com', // optional, defaults to this
-  timeout: 30000 // optional, defaults to 30 seconds
-});
+```json
+{
+  "prettier": "@nextnode/standards/prettier"
+}
 ```
 
-### Execute a Function
+### Prettier Astro
 
-```typescript
-// Execute a function
-const result = await client.executeFunction({
-  functionName: 'my-function',
-  payload: {
-    key: 'value',
-    data: [1, 2, 3]
-  },
-  headers: {
-    'Custom-Header': 'value'
+Pour les projets Astro, ajoutez dans votre `package.json` :
+
+```json
+{
+  "prettier": "@nextnode/standards/prettier/astro"
+}
+```
+
+**Projets concernés** : nextnode-front, yasmine
+
+### Commitlint
+
+Pour la validation des messages de commit, créez un fichier `commitlint.config.js` :
+
+```javascript
+export default {
+  extends: ["@nextnode/standards/commitlint"],
+};
+```
+
+## Scripts recommandés
+
+Ajoutez ces scripts dans votre `package.json` :
+
+```json
+{
+  "scripts": {
+    "lint": "biome lint --write",
+    "format": "prettier --write .",
+    "check": "biome check --write && prettier --check ."
   }
-});
-
-if (result.success) {
-  console.log('Function result:', result.data);
-} else {
-  console.error('Function error:', result.error);
 }
 ```
 
-### Configuration Management
+## Configuration de référence
 
-```typescript
-// Update configuration
-client.updateConfig({
-  apiKey: 'new-api-key',
-  timeout: 60000
-});
+### Biome
 
-// Get current configuration
-const config = client.getConfig();
-console.log('Current config:', config);
-```
+La configuration Biome inclut :
 
-## API Reference
+- **Linter strict** avec règles NextNode
+- **Import organization** avec groupes personnalisés
+- **TypeScript support** complet
+- **React/JSX** optimisations
+- **Overrides** pour fichiers de config et tests
 
-### NextnodeClient
+### Prettier
 
-#### Constructor
+Les configurations Prettier incluent :
 
-```typescript
-new NextnodeClient(config?: NextnodeConfig)
-```
+**Base** :
 
-#### Methods
+- Tabs (4 espaces)
+- Single quotes
+- No semicolons
+- Trailing commas
 
-- `executeFunction<T>(request: FunctionRequest): Promise<FunctionResponse<T>>` - Execute a function
-- `updateConfig(newConfig: Partial<NextnodeConfig>): void` - Update client configuration
-- `getConfig(): NextnodeConfig` - Get current configuration
+**Astro** (extends base) :
 
-### Types
+- Support Astro parser
+- Plugin Tailwind CSS
+- Overrides pour fichiers `.astro`
 
-#### NextnodeConfig
+### Commitlint
 
-```typescript
-interface NextnodeConfig {
-  apiKey?: string;
-  baseUrl?: string;
-  timeout?: number;
-}
-```
+Configuration basée sur les conventions commitlint avec :
 
-#### FunctionRequest
+- Types standardisés (feat, fix, docs, etc.)
+- Limites de longueur
+- Formatage strict des messages
 
-```typescript
-interface FunctionRequest {
-  functionName: string;
-  payload?: Record<string, any>;
-  headers?: Record<string, string>;
-}
-```
+## Migration des projets existants
 
-#### FunctionResponse
+### Projets TypeScript avec Biome
 
-```typescript
-interface FunctionResponse<T = any> {
-  success: boolean;
-  data?: T;
-  error?: string;
-  statusCode: number;
-}
-```
+1. Installer le package : `pnpm add -D @nextnode/standards`
+2. Remplacer `biome.json` par : `{ "extends": ["@nextnode/standards/biome"] }`
+3. Supprimer l'ancien fichier de configuration
 
-## Development
+### Projets Astro avec Prettier
 
-### Building
+1. Installer le package : `pnpm add -D @nextnode/standards`
+2. Remplacer `.prettierrc` par l'entrée `package.json`
+3. Supprimer l'ancien fichier `.prettierrc`
 
-```bash
-npm run build
-```
+## Avantages
 
-### Development Mode
+✅ **Standards unifiés** - Toutes les configurations au même endroit  
+✅ **Maintenance centralisée** - Une seule source de vérité  
+✅ **Migration simple** - Extension en une ligne  
+✅ **Évolutivité** - Facile d'ajouter de nouvelles configurations  
+✅ **Cohérence garantie** - Impossible de dévier des standards
 
-```bash
-npm run dev
-```
+## Compatibilité
 
-### Publishing
+- **Node.js** : >=24.0.0
+- **pnpm** : 10.11.0+
+- **Biome** : ^2.0.0
+- **Prettier** : ^3.0.0
+- **Commitlint** : ^18.0.0
 
-```bash
-npm publish
-```
+## Licence
 
-## License
-
-ISC
+MIT - NextNode Solutions

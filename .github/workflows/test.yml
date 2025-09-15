@@ -2,7 +2,7 @@ name: Tests
 
 on:
   pull_request:
-    branches: [ main, master ]
+    branches: [main, master]
 
 jobs:
   quality-checks:
@@ -10,9 +10,9 @@ jobs:
     uses: NextNodeSolutions/github-actions/.github/workflows/quality-checks.yml@main
     with:
       run-lint: true
-      run-typecheck: true
-      run-tests: true
-      run-build: true
-      test-coverage: true
-      node-version: '24'
-      pnpm-version: '10.11.0' 
+      run-typecheck: false
+      run-tests: false
+      run-build: false
+      test-coverage: false
+      node-version: "24"
+      pnpm-version: "10.11.0"
