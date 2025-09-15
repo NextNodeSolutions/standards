@@ -22,21 +22,20 @@
   },
   "homepage": "https://github.com/NextNodeSolutions/standards#readme",
   "exports": {
-    "./biome": "./biome/base.json",
-    "./prettier": "./prettier/base.json",
-    "./prettier/astro": "./prettier/astro.json",
-    "./commitlint": "./commitlint/base.json"
+    "./biome": "./src/biome/base.json",
+    "./prettier": "./src/prettier/base.js",
+    "./prettier/astro": "./src/prettier/astro.js",
+    "./commitlint": "./src/commitlint/base.json"
   },
   "files": [
-    "biome",
-    "prettier",
-    "commitlint",
+    "src",
     "README.md"
   ],
   "engines": {
     "node": ">=24.0.0"
   },
   "packageManager": "pnpm@10.11.0",
+  "type": "module",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"

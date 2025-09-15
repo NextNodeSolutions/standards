@@ -1,6 +1,3 @@
 {
-  "extends": ["./biome/base.json"],
-  "formatter": {
-    "enabled": true
-  }
+  "extends": ["./src/biome/base.json"]
 }
