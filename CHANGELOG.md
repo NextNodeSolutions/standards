@@ -1,5 +1,15 @@
 # @nextnode/standards
 
+## 2.0.1
+
+### Patch Changes
+
+- [#4](https://github.com/NextNodeSolutions/standards/pull/4) [`bfe20c2`](https://github.com/NextNodeSolutions/standards/commit/bfe20c2927e2b9aa7f92ccaa4e07d92e7763bd90) Thanks [@walid-mos](https://github.com/walid-mos)! - Configure Biome for JSON formatting with tab indentation
+    - Add JSON and JSONC files to Biome includes
+    - Disable general formatter (handled by Prettier)
+    - Enable JSON-specific formatter with tab indentation (width 4)
+    - Configure strict JSON parsing without comments or trailing commas
+
 ## 2.0.0
 
 ### Major Changes
