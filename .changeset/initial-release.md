@@ -1,5 +1,5 @@
 ---
-"@nextnode/standards": major
+'@nextnode/standards': major
 ---
 
 Initial release of @nextnode/standards - unified configuration package for NextNode projects

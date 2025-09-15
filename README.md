@@ -20,7 +20,7 @@ Pour les projets TypeScript utilisant Biome comme linter, créez un fichier `bio
 
 ```json
 {
-  "extends": ["@nextnode/standards/biome"]
+	"extends": ["@nextnode/standards/biome"]
 }
 ```
 
@@ -32,7 +32,7 @@ Pour les projets utilisant Prettier sans Astro, ajoutez dans votre `package.json
 
 ```json
 {
-  "prettier": "@nextnode/standards/prettier"
+	"prettier": "@nextnode/standards/prettier"
 }
 ```
 
@@ -42,7 +42,7 @@ Pour les projets Astro, ajoutez dans votre `package.json` :
 
 ```json
 {
-  "prettier": "@nextnode/standards/prettier/astro"
+	"prettier": "@nextnode/standards/prettier/astro"
 }
 ```
 
@@ -54,8 +54,8 @@ Pour la validation des messages de commit, créez un fichier `commitlint.config.
 
 ```javascript
 export default {
-  extends: ["@nextnode/standards/commitlint"],
-};
+	extends: ['@nextnode/standards/commitlint'],
+}
 ```
 
 ## Scripts recommandés
@@ -64,11 +64,11 @@ Ajoutez ces scripts dans votre `package.json` :
 
 ```json
 {
-  "scripts": {
-    "lint": "biome lint --write",
-    "format": "prettier --write .",
-    "check": "biome check --write && prettier --check ."
-  }
+	"scripts": {
+		"lint": "biome lint --write",
+		"format": "prettier --write .",
+		"check": "biome check --write && prettier --check ."
+	}
 }
 ```
 
