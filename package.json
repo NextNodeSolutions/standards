@@ -87,13 +87,5 @@
     "./prettier": "./src/prettier/base.js",
     "./prettier/astro": "./src/prettier/astro.js",
     "./commitlint": "./src/commitlint/base.json"
-  },
-  "lint-staged": {
-    "*.{js,ts,tsx,jsx,mjs,cjs}": [
-      "biome lint --write"
-    ],
-    "*.{json,md,yml,yaml}": [
-      "prettier --write"
-    ]
   }
 }
