@@ -1,154 +1,154 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.2.4/schema.json",
-  "files": {
-    "includes": [
-      "**/*.ts",
-      "**/*.tsx",
-      "**/*.js",
-      "**/*.jsx",
-      "**/*.mjs",
-      "**/*.cjs"
-    ],
-    "ignoreUnknown": true
-  },
-  "formatter": {
-    "enabled": true
-  },
-  "linter": {
-    "enabled": true,
-    "rules": {
-      "recommended": true,
-      "complexity": {
-        "noForEach": "off",
-        "noUselessTypeConstraint": "error",
-        "noExcessiveCognitiveComplexity": "error",
-        "useLiteralKeys": "error",
-        "useArrowFunction": "error"
-      },
-      "correctness": {
-        "noConstAssign": "error",
-        "noUnusedVariables": {
-          "level": "error",
-          "options": {
-            "ignoreRestSiblings": true
-          }
-        },
-        "noUnusedImports": "error",
-        "useExhaustiveDependencies": "warn",
-        "useHookAtTopLevel": "error"
-      },
-      "style": {
-        "noNonNullAssertion": "off",
-        "noParameterAssign": "error",
-        "useConst": "error",
-        "useDefaultParameterLast": "error",
-        "useExponentiationOperator": "error",
-        "useTemplate": "error",
-        "useNodejsImportProtocol": "off",
-        "useNumberNamespace": "error",
-        "useSingleVarDeclarator": "error",
-        "useBlockStatements": "off",
-        "noUselessElse": "error",
-        "useCollapsedElseIf": "error",
-        "useShorthandFunctionType": "error",
-        "useAsConstAssertion": "error",
-        "useImportType": {
-          "level": "error",
-          "options": {
-            "style": "separatedType"
-          }
-        }
-      },
-      "suspicious": {
-        "noExplicitAny": "error",
-        "noImplicitAnyLet": "error",
-        "noArrayIndexKey": "warn",
-        "noAssignInExpressions": "error",
-        "noAsyncPromiseExecutor": "error",
-        "noDoubleEquals": "error",
-        "noConsole": "warn",
-        "noDebugger": "error",
-        "noFallthroughSwitchClause": "error",
-        "noVar": "error"
-      },
-      "performance": {
-        "noDelete": "error",
-        "noAccumulatingSpread": "warn"
-      },
-      "nursery": {
-        "useSortedClasses": "off"
-      },
-      "a11y": {
-        "useKeyWithClickEvents": "warn",
-        "useValidAnchor": "warn"
-      }
-    }
-  },
-  "vcs": {
-    "enabled": true,
-    "clientKind": "git",
-    "useIgnoreFile": true
-  },
-  "javascript": {
-    "globals": [
-      "React",
-      "JSX",
-      "NodeJS",
-      "process",
-      "console",
-      "Buffer",
-      "__dirname",
-      "__filename",
-      "global",
-      "module",
-      "require",
-      "exports"
-    ]
-  },
-  "assist": {
-    "actions": {
-      "source": {
-        "organizeImports": {
-          "level": "on",
-          "options": {
-            "groups": [
-              {
-                "source": ["react"],
-                "type": false
-              },
-              {
-                "source": ["next/**"],
-                "type": false
-              },
-              ":NODE:",
-              ":PACKAGE:",
-              ":BLANK_LINE:",
-              {
-                "source": ["@/**"],
-                "type": false
-              },
-              ":SOURCE:",
-              ":BLANK_LINE:",
-              ":PATH:",
-              ":BLANK_LINE:",
-              ":TYPE:"
-            ]
-          }
-        }
-      }
-    }
-  },
-  "overrides": [
-    {
-      "includes": ["**/*.config.*", "**/*.test.*", "**/*.spec.*"],
-      "linter": {
-        "rules": {
-          "suspicious": {
-            "noConsole": "off",
-            "noExplicitAny": "warn"
-          }
-        }
-      }
-    }
-  ]
+	"$schema": "https://biomejs.dev/schemas/2.2.4/schema.json",
+	"files": {
+		"includes": [
+			"**/*.ts",
+			"**/*.tsx",
+			"**/*.js",
+			"**/*.jsx",
+			"**/*.mjs",
+			"**/*.cjs"
+		],
+		"ignoreUnknown": true
+	},
+	"formatter": {
+		"enabled": true
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"complexity": {
+				"noForEach": "off",
+				"noUselessTypeConstraint": "error",
+				"noExcessiveCognitiveComplexity": "error",
+				"useLiteralKeys": "error",
+				"useArrowFunction": "error"
+			},
+			"correctness": {
+				"noConstAssign": "error",
+				"noUnusedVariables": {
+					"level": "error",
+					"options": {
+						"ignoreRestSiblings": true
+					}
+				},
+				"noUnusedImports": "error",
+				"useExhaustiveDependencies": "warn",
+				"useHookAtTopLevel": "error"
+			},
+			"style": {
+				"noNonNullAssertion": "off",
+				"noParameterAssign": "error",
+				"useConst": "error",
+				"useDefaultParameterLast": "error",
+				"useExponentiationOperator": "error",
+				"useTemplate": "error",
+				"useNodejsImportProtocol": "off",
+				"useNumberNamespace": "error",
+				"useSingleVarDeclarator": "error",
+				"useBlockStatements": "off",
+				"noUselessElse": "error",
+				"useCollapsedElseIf": "error",
+				"useShorthandFunctionType": "error",
+				"useAsConstAssertion": "error",
+				"useImportType": {
+					"level": "error",
+					"options": {
+						"style": "separatedType"
+					}
+				}
+			},
+			"suspicious": {
+				"noExplicitAny": "error",
+				"noImplicitAnyLet": "error",
+				"noArrayIndexKey": "warn",
+				"noAssignInExpressions": "error",
+				"noAsyncPromiseExecutor": "error",
+				"noDoubleEquals": "error",
+				"noConsole": "warn",
+				"noDebugger": "error",
+				"noFallthroughSwitchClause": "error",
+				"noVar": "error"
+			},
+			"performance": {
+				"noDelete": "error",
+				"noAccumulatingSpread": "warn"
+			},
+			"nursery": {
+				"useSortedClasses": "off"
+			},
+			"a11y": {
+				"useKeyWithClickEvents": "warn",
+				"useValidAnchor": "warn"
+			}
+		}
+	},
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true
+	},
+	"javascript": {
+		"globals": [
+			"React",
+			"JSX",
+			"NodeJS",
+			"process",
+			"console",
+			"Buffer",
+			"__dirname",
+			"__filename",
+			"global",
+			"module",
+			"require",
+			"exports"
+		]
+	},
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": {
+					"level": "on",
+					"options": {
+						"groups": [
+							{
+								"source": ["react"],
+								"type": false
+							},
+							{
+								"source": ["next/**"],
+								"type": false
+							},
+							":NODE:",
+							":PACKAGE:",
+							":BLANK_LINE:",
+							{
+								"source": ["@/**"],
+								"type": false
+							},
+							":SOURCE:",
+							":BLANK_LINE:",
+							":PATH:",
+							":BLANK_LINE:",
+							":TYPE:"
+						]
+					}
+				}
+			}
+		}
+	},
+	"overrides": [
+		{
+			"includes": ["**/*.config.*", "**/*.test.*", "**/*.spec.*"],
+			"linter": {
+				"rules": {
+					"suspicious": {
+						"noConsole": "off",
+						"noExplicitAny": "warn"
+					}
+				}
+			}
+		}
+	]
 }

@@ -5,14 +5,14 @@
 export default {
 	useTabs: true,
 	tabWidth: 4,
-	endOfLine: "lf",
+	endOfLine: 'lf',
 	printWidth: 80,
 	jsxSingleQuote: false,
-	trailingComma: "all",
+	trailingComma: 'all',
 	semi: false,
-	arrowParens: "avoid",
+	arrowParens: 'avoid',
 	bracketSpacing: true,
 	bracketSameLine: false,
 	singleQuote: true,
-	plugins: ["prettier-plugin-tailwindcss"]
+	plugins: ['prettier-plugin-tailwindcss'],
 }
