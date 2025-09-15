@@ -33,7 +33,7 @@
 		"clean": "rm -rf node_modules/.cache",
 		"format": "prettier --write .",
 		"format:check": "prettier --check .",
-		"lint": "biome check --write",
+		"lint": "biome check --write --no-errors-on-unmatched",
 		"lint-staged": "lint-staged",
 		"prepare": "husky",
 		"test": "echo 'Configuration package - no tests needed'",
