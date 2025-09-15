@@ -1,8 +1,8 @@
-import nextnodeEslint from '@nextnode/eslint-plugin/base'
+import nextnodeEslint from "@nextnode/eslint-plugin/base";
 
 export default [
-	...nextnodeEslint,
-	{
-		ignores: ['dist/**/*', 'coverage/**/*'],
-	},
-]
+  ...nextnodeEslint,
+  {
+    ignores: ["dist/**/*", "coverage/**/*"],
+  },
+];

@@ -1,75 +1,95 @@
 {
-  "name": "",
+  "name": "@nextnode/standards",
   "version": "1.0.0",
-  "description": "Client library for Nextnode Functions",
+  "description": "Standards de développement NextNode : formatting, linting et style",
   "keywords": [
-    "api",
-    "client",
-    "functions",
     "nextnode",
-    "typescript"
+    "standards",
+    "linting",
+    "formatting",
+    "biome",
+    "prettier",
+    "commitlint"
   ],
-  "license": "ISC",
-  "author": "Walid M",
-  "main": "./dist/index.js",
-  "scripts": {
-    "build": "tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json",
-    "changeset": "changeset",
-    "changeset:publish": "changeset publish",
-    "changeset:version": "changeset version",
-    "clean": "rm -rf dist",
-    "commitlint": "commitlint --edit",
-    "format": "biome check --write --no-errors-on-unmatched .",
-    "lint": "eslint . --max-warnings 0 --fix",
-    "lint-staged": "lint-staged",
-    "prebuild": "pnpm clean",
-    "prepare": "husky",
-    "prepublishOnly": "pnpm build",
-    "test": "vitest run",
-    "test:coverage": "vitest run --coverage",
-    "test:ui": "vitest --ui",
-    "test:watch": "vitest",
-    "type-check": "tsc --noEmit"
+  "license": "MIT",
+  "author": "NextNode Solutions",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NextNodeSolutions/standards.git"
   },
-  "dependencies": {
-    "@nextnode/logger": "^0.2.4"
+  "bugs": {
+    "url": "https://github.com/NextNodeSolutions/standards/issues"
   },
-  "devDependencies": {
-    "@biomejs/biome": "^2.2.3",
-    "@changesets/changelog-github": "^0.5.1",
-    "@changesets/cli": "^2.29.4",
-    "@commitlint/cli": "^19.2.1",
-    "@commitlint/config-conventional": "^19.1.0",
-    "@nextnode/eslint-plugin": "^1.2.0",
-    "@types/node": "^22.0.0",
-    "@vitest/coverage-v8": "^3.1.4",
-    "better-sort-package-json": "^1.1.1",
-    "eslint": "^9.27.0",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.2",
-    "tsc-alias": "^1.8.16",
-    "typescript": "^5.0.0",
-    "vitest": "^3.1.4"
+  "homepage": "https://github.com/NextNodeSolutions/standards#readme",
+  "exports": {
+    "./biome": "./biome/base.json",
+    "./prettier": "./prettier/base.json",
+    "./prettier/astro": "./prettier/astro.json",
+    "./commitlint": "./commitlint/base.json"
   },
-  "peerDependencies": {
-    "eslint": "^9.22.0"
-  },
+  "files": [
+    "biome",
+    "prettier",
+    "commitlint",
+    "README.md"
+  ],
   "engines": {
     "node": ">=24.0.0"
   },
   "packageManager": "pnpm@10.11.0",
-  "type": "module",
-  "files": [
-    "CHANGELOG.md",
-    "README.md",
-    "dist/**/*"
-  ],
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "peerDependencies": {
+    "@biomejs/biome": "^2.0.0",
+    "prettier": "^3.0.0",
+    "@commitlint/cli": "^18.0.0",
+    "@commitlint/config-conventional": "^18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@biomejs/biome": {
+      "optional": false
+    },
+    "prettier": {
+      "optional": true
+    },
+    "@commitlint/cli": {
+      "optional": true
+    },
+    "@commitlint/config-conventional": {
+      "optional": true
     }
   },
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts"
+  "scripts": {
+    "build": "echo 'No build step needed for config package'",
+    "clean": "rm -rf node_modules/.cache",
+    "format": "prettier --write .",
+    "lint": "biome lint --write",
+    "lint:check": "biome lint",
+    "lint:fix": "biome lint --write",
+    "format:check": "prettier --check .",
+    "type-check": "echo 'No TypeScript files to check'",
+    "test": "echo 'Configuration package - no tests needed'",
+    "prepare": "husky",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,jsx,mjs,cjs}": [
+      "biome lint --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.4",
+    "prettier": "^3.2.0",
+    "@commitlint/cli": "^18.4.0",
+    "@commitlint/config-conventional": "^18.4.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.6.6"
+  }
 }

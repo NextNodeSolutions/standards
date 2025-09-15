@@ -7,11 +7,11 @@
  */
 export interface ClientConfig {
   /** API key for authentication */
-  apiKey?: string
+  apiKey?: string;
   /** Base URL for API requests */
-  baseUrl?: string
+  baseUrl?: string;
   /** Request timeout in milliseconds */
-  timeout?: number
+  timeout?: number;
 }
 
 /**
@@ -19,13 +19,13 @@ export interface ClientConfig {
  */
 export interface ApiResponse<T = unknown> {
   /** Whether the request was successful */
-  success: boolean
+  success: boolean;
   /** Response data (if successful) */
-  data?: T
+  data?: T;
   /** Error message (if failed) */
-  error?: string
+  error?: string;
   /** HTTP status code */
-  statusCode: number
+  statusCode: number;
 }
 
 /**
@@ -33,9 +33,9 @@ export interface ApiResponse<T = unknown> {
  */
 export interface LibraryError {
   /** Error code */
-  code: string
+  code: string;
   /** Human-readable error message */
-  message: string
+  message: string;
   /** Optional error details */
-  details?: Record<string, unknown>
+  details?: Record<string, unknown>;
 }
