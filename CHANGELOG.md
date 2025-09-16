@@ -1,5 +1,15 @@
 # @nextnode/standards
 
+## 2.0.4
+
+### Patch Changes
+
+- [#10](https://github.com/NextNodeSolutions/standards/pull/10) [`06853f6`](https://github.com/NextNodeSolutions/standards/commit/06853f66e6f4d673494040169e2e14ba8136b275) Thanks [@walid-mos](https://github.com/walid-mos)! - fix: convert commitlint configuration from JSON to JavaScript
+
+    Convert commitlint configuration from JSON format to JavaScript format to resolve compatibility issues. The configuration now exports a proper JavaScript module that can be imported correctly by commitlint.
+
+    This fixes issues where the JSON configuration was not being properly loaded by commitlint tools.
+
 ## 2.0.3
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
 	"name": "@nextnode/standards",
-	"version": "2.0.3",
+	"version": "2.0.4",
 	"description": "Standards de développement NextNode : formatting, linting et style",
 	"keywords": [
 		"biome",
@@ -85,7 +85,7 @@
 		"./biome": "./src/biome/base.json",
 		"./prettier": "./src/prettier/base.js",
 		"./prettier/astro": "./src/prettier/astro.js",
-		"./commitlint": "./src/commitlint/base.json"
+		"./commitlint": "./src/commitlint/base.js"
 	},
 	"prettier": "./src/prettier/base.js"
 }
