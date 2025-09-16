@@ -15,4 +15,14 @@ export default {
 	bracketSameLine: false,
 	singleQuote: true,
 	plugins: ['prettier-plugin-tailwindcss'],
+	overrides: [
+		{
+			files: ['*.json', '*.jsonc'],
+			options: {
+				useTabs: true,
+				tabWidth: 4,
+				trailingComma: 'none',
+			},
+		},
+	],
 }

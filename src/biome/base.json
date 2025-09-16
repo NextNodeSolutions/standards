@@ -18,12 +18,7 @@
 	},
 	"json": {
 		"formatter": {
-			"enabled": true,
-			"indentStyle": "tab",
-			"indentWidth": 4,
-			"lineEnding": "lf",
-			"lineWidth": 100,
-			"trailingCommas": "none"
+			"enabled": false
 		},
 		"parser": {
 			"allowComments": false,
@@ -169,6 +164,9 @@
 		{
 			"includes": ["**/tsconfig*.json"],
 			"json": {
+				"formatter": {
+					"enabled": false
+				},
 				"parser": {
 					"allowComments": true,
 					"allowTrailingCommas": false

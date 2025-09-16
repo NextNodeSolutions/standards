@@ -43,8 +43,8 @@
 		"@biomejs/biome": "^2.2.4",
 		"@changesets/changelog-github": "^0.5.0",
 		"@changesets/cli": "^2.29.4",
-		"@commitlint/cli": "^18.4.0",
-		"@commitlint/config-conventional": "^18.4.0",
+		"@commitlint/cli": "^19.8.1",
+		"@commitlint/config-conventional": "^19.8.1",
 		"better-sort-package-json": "^1.1.1",
 		"husky": "^9.0.11",
 		"lint-staged": "^15.2.2",
@@ -54,8 +54,8 @@
 	},
 	"peerDependencies": {
 		"@biomejs/biome": "^2.0.0",
-		"@commitlint/cli": ">=18.0.0",
-		"@commitlint/config-conventional": ">=18.0.0",
+		"@commitlint/cli": "^19.0.0",
+		"@commitlint/config-conventional": "^19.0.0",
 		"prettier": "^3.0.0"
 	},
 	"peerDependenciesMeta": {
