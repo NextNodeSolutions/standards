@@ -85,7 +85,7 @@
 		"./biome": "./src/biome/base.json",
 		"./prettier": "./src/prettier/base.js",
 		"./prettier/astro": "./src/prettier/astro.js",
-		"./commitlint": "./src/commitlint/base.json"
+		"./commitlint": "./src/commitlint/base.js"
 	},
 	"prettier": "./src/prettier/base.js"
 }
