@@ -1,5 +1,17 @@
 # @nextnode/standards
 
+## 2.0.3
+
+### Patch Changes
+
+- [#8](https://github.com/NextNodeSolutions/standards/pull/8) [`03ef639`](https://github.com/NextNodeSolutions/standards/commit/03ef63940d1172383727086b9d19bb98ca8450e5) Thanks [@walid-mos](https://github.com/walid-mos)! - Separate Biome and Prettier responsibilities for JSON formatting
+    - Disable JSON formatting in Biome to prevent conflicts with Prettier
+    - Configure Prettier to handle JSON files with proper tab indentation (4 spaces)
+    - Maintain tsconfig.json comment support through Biome parser
+    - Update commitlint dependencies to v19
+
+    This resolves formatting conflicts between the two tools while maintaining the desired tab-based indentation for JSON files.
+
 ## 2.0.2
 
 ### Patch Changes
