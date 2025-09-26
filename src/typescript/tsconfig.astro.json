@@ -1,0 +1,24 @@
+{
+	"extends": "astro/tsconfigs/strict",
+	"compilerOptions": {
+		// Module System
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"target": "es2022",
+		"allowJs": true,
+		"resolveJsonModule": true,
+		"moduleDetection": "force",
+		"isolatedModules": true,
+		"verbatimModuleSyntax": true,
+
+		// Type Safety
+		"strict": true,
+		"noUncheckedIndexedAccess": true,
+		"noImplicitOverride": true,
+
+		// Output Configuration
+		"module": "preserve",
+		"noEmit": true,
+		"lib": ["es2022", "dom", "dom.iterable"]
+	}
+}

@@ -56,7 +56,10 @@
 		"@biomejs/biome": "^2.0.0",
 		"@commitlint/cli": "^19.0.0",
 		"@commitlint/config-conventional": "^19.0.0",
-		"prettier": "^3.0.0"
+		"prettier": "^3.0.0",
+		"vite": "^5.0.0",
+		"vite-tsconfig-paths": "^5.0.0",
+		"vitest": "^3.0.0"
 	},
 	"peerDependenciesMeta": {
 		"@biomejs/biome": {
@@ -69,6 +72,15 @@
 			"optional": true
 		},
 		"prettier": {
+			"optional": true
+		},
+		"vite": {
+			"optional": true
+		},
+		"vite-tsconfig-paths": {
+			"optional": true
+		},
+		"vitest": {
 			"optional": true
 		}
 	},
@@ -85,7 +97,12 @@
 		"./biome": "./src/biome/base.json",
 		"./prettier": "./src/prettier/base.js",
 		"./prettier/astro": "./src/prettier/astro.js",
-		"./commitlint": "./src/commitlint/base.js"
+		"./commitlint": "./src/commitlint/base.js",
+		"./typescript/astro": "./src/typescript/tsconfig.astro.json",
+		"./typescript/library": "./src/typescript/tsconfig.library.json",
+		"./typescript/nextjs": "./src/typescript/tsconfig.nextjs.json",
+		"./vitest/frontend": "./src/vitest/vitest.frontend.js",
+		"./vitest/backend": "./src/vitest/vitest.backend.js"
 	},
 	"prettier": "./src/prettier/base.js"
 }
