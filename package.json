@@ -1,6 +1,6 @@
 {
 	"name": "@nextnode/standards",
-	"version": "2.0.5",
+	"version": "2.1.0",
 	"description": "Standards de développement NextNode : formatting, linting et style",
 	"keywords": [
 		"biome",
