@@ -1,5 +1,14 @@
 # @nextnode/standards
 
+## 2.1.1
+
+### Patch Changes
+
+- [#17](https://github.com/NextNodeSolutions/standards/pull/17) [`5b461fa`](https://github.com/NextNodeSolutions/standards/commit/5b461fa175a629d4aee92edc114dec963ce5ab44) Thanks [@walid-mos](https://github.com/walid-mos)! - Add Vitest type definitions for backend and frontend testing
+    - Add vitest.backend.d.ts with Node.js specific test types for server-side testing
+    - Add vitest.frontend.d.ts with DOM/browser specific test types for client-side testing
+    - Enhanced testing capabilities with environment-specific type support
+
 ## 2.1.0
 
 ### Minor Changes
