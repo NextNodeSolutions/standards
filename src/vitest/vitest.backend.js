@@ -5,16 +5,20 @@ export default defineConfig({
 		// Environment Configuration
 		globals: true,
 		environment: 'node',
-		include: ['src/**/*.{test,spec}.ts'],
 		env: {
 			NODE_ENV: 'test',
 		},
+
+		// Mock Cleanup Configuration
+		restoreMocks: true,
+		clearMocks: true,
+		unstubGlobals: true,
+		mockReset: false,
 
 		// Coverage Configuration
 		coverage: {
 			provider: 'v8',
 			reporter: ['text', 'json', 'html'],
-			reportsDirectory: './src/__tests__/coverage',
 			exclude: [
 				'node_modules/**',
 				'dist/**',
