@@ -1,5 +1,11 @@
 # @nextnode/standards
 
+## 2.1.2
+
+### Patch Changes
+
+- [#19](https://github.com/NextNodeSolutions/standards/pull/19) [`1fa249d`](https://github.com/NextNodeSolutions/standards/commit/1fa249d387a13604b66f33ea90a04f251a30f692) Thanks [@walid-mos](https://github.com/walid-mos)! - Update standards documentation and configurations
+
 ## 2.1.1
 
 ### Patch Changes
