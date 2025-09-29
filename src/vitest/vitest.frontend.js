@@ -5,7 +5,6 @@ export default defineConfig({
 		// Environment Configuration
 		environment: 'jsdom',
 		globals: true,
-		setupFiles: ['./src/test/setup.ts'],
 
 		// Mock Cleanup Configuration
 		restoreMocks: true,
@@ -17,7 +16,6 @@ export default defineConfig({
 		coverage: {
 			provider: 'v8',
 			reporter: ['json', 'html', 'text'],
-			reportsDirectory: './src/test/coverage',
 			enabled: true,
 			exclude: [
 				'**/*.test.ts',
