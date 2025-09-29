@@ -101,8 +101,14 @@
 		"./typescript/astro": "./src/typescript/tsconfig.astro.json",
 		"./typescript/library": "./src/typescript/tsconfig.library.json",
 		"./typescript/nextjs": "./src/typescript/tsconfig.nextjs.json",
-		"./vitest/frontend": "./src/vitest/vitest.frontend.js",
-		"./vitest/backend": "./src/vitest/vitest.backend.js"
+		"./vitest/frontend": {
+			"types": "./src/vitest/vitest.frontend.d.ts",
+			"default": "./src/vitest/vitest.frontend.js"
+		},
+		"./vitest/backend": {
+			"types": "./src/vitest/vitest.backend.d.ts",
+			"default": "./src/vitest/vitest.backend.js"
+		}
 	},
 	"prettier": "./src/prettier/base.js"
 }
