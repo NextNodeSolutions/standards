@@ -1,5 +1,13 @@
 # @nextnode/standards
 
+## 2.1.3
+
+### Patch Changes
+
+- [#21](https://github.com/NextNodeSolutions/standards/pull/21) [`536be05`](https://github.com/NextNodeSolutions/standards/commit/536be050735ab3b3142d99841e82fea3f01d22ac) Thanks [@walid-mos](https://github.com/walid-mos)! - Improve Vitest configurations and fix backend/frontend defaults
+
+- [#21](https://github.com/NextNodeSolutions/standards/pull/21) [`536be05`](https://github.com/NextNodeSolutions/standards/commit/536be050735ab3b3142d99841e82fea3f01d22ac) Thanks [@walid-mos](https://github.com/walid-mos)! - Update standards documentation and configurations
+
 ## 2.1.2
 
 ### Patch Changes
