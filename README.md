@@ -26,9 +26,21 @@ Pour les projets TypeScript utilisant Biome comme linter, créez un fichier `bio
 
 **Projets concernés** : logger, config-manager, http-client, functions-client, project-templates, validation, eslint-plugin
 
-### Prettier standard
+### Prettier Core (libraries)
 
-Pour les projets utilisant Prettier sans Astro, ajoutez dans votre `package.json` :
+Pour les libraries TypeScript sans Tailwind, ajoutez dans votre `package.json` :
+
+```json
+{
+	"prettier": "@nextnode/standards/prettier/core"
+}
+```
+
+**Projets concernés** : logger, config-manager, http-client, functions-client, validation
+
+### Prettier Base (web apps)
+
+Pour les projets web utilisant Tailwind CSS, ajoutez dans votre `package.json` :
 
 ```json
 {
@@ -36,9 +48,11 @@ Pour les projets utilisant Prettier sans Astro, ajoutez dans votre `package.json
 }
 ```
 
+**Projets concernés** : applications Next.js, React apps avec Tailwind
+
 ### Prettier Astro
 
-Pour les projets Astro, ajoutez dans votre `package.json` :
+Pour les projets Astro avec Tailwind, ajoutez dans votre `package.json` :
 
 ```json
 {
@@ -86,19 +100,34 @@ La configuration Biome inclut :
 
 ### Prettier
 
-Les configurations Prettier incluent :
+Architecture en couches :
 
-**Base** :
+```
+core.js (no plugins)
+    ↓ extends
+base.js (+ Tailwind)
+    ↓ extends
+astro.js (+ Astro)
+```
+
+**Core** (libraries) :
 
 - Tabs (4 espaces)
 - Single quotes
 - No semicolons
 - Trailing commas
+- Aucun plugin (zéro dépendances)
 
-**Astro** (extends base) :
+**Base** (web apps) :
 
-- Support Astro parser
-- Plugin Tailwind CSS
+- Extends core
+- Plugin `prettier-plugin-tailwindcss`
+
+**Astro** :
+
+- Extends core
+- Plugin `prettier-plugin-astro`
+- Plugin `prettier-plugin-tailwindcss`
 - Overrides pour fichiers `.astro`
 
 ### Commitlint

@@ -91,6 +91,7 @@
 	"type": "module",
 	"exports": {
 		"./biome": "./src/biome/base.json",
+		"./prettier/core": "./src/prettier/core.js",
 		"./prettier": "./src/prettier/base.js",
 		"./prettier/astro": "./src/prettier/astro.js",
 		"./commitlint": "./src/commitlint/base.js",
