@@ -3,15 +3,13 @@
  * Extends the base config with Astro-specific settings
  * @type {import("prettier").Config}
  */
-import baseConfig from './base.js'
+import coreConfig from './core.js'
 
 export default {
-	...baseConfig,
-	plugins: [
-		'prettier-plugin-astro',
-		'prettier-plugin-tailwindcss', // Tailwind plugin from base
-	],
+	...coreConfig,
+	plugins: ['prettier-plugin-astro', 'prettier-plugin-tailwindcss'],
 	overrides: [
+		...(coreConfig.overrides || []),
 		{
 			files: '*.astro',
 			options: {

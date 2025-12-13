@@ -1,28 +1,11 @@
 /**
- * Base Prettier configuration for NextNode projects
+ * Base Prettier configuration for NextNode web projects
+ * Includes Tailwind CSS plugin for class sorting
  * @type {import("prettier").Config}
  */
+import coreConfig from './core.js'
+
 export default {
-	useTabs: true,
-	tabWidth: 4,
-	endOfLine: 'lf',
-	printWidth: 80,
-	jsxSingleQuote: false,
-	trailingComma: 'all',
-	semi: false,
-	arrowParens: 'avoid',
-	bracketSpacing: true,
-	bracketSameLine: false,
-	singleQuote: true,
+	...coreConfig,
 	plugins: ['prettier-plugin-tailwindcss'],
-	overrides: [
-		{
-			files: ['*.json', '*.jsonc'],
-			options: {
-				useTabs: true,
-				tabWidth: 4,
-				trailingComma: 'none',
-			},
-		},
-	],
 }
