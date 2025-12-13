@@ -1,5 +1,14 @@
 # @nextnode/standards
 
+## 2.2.0
+
+### Minor Changes
+
+- [#23](https://github.com/NextNodeSolutions/standards/pull/23) [`a6cbcb1`](https://github.com/NextNodeSolutions/standards/commit/a6cbcb147c26b5cce6c05e0ea8d29667b1a8640c) Thanks [@walid-mos](https://github.com/walid-mos)! - Add Prettier core config without plugins for TypeScript libraries
+    - New `@nextnode/standards/prettier/core` export with zero plugins
+    - Layered architecture: core (no plugins) -> base (Tailwind) -> astro (Tailwind + Astro)
+    - Libraries without Tailwind can now use the core config without extra dependencies
+
 ## 2.1.3
 
 ### Patch Changes
