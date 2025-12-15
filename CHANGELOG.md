@@ -1,5 +1,13 @@
 # @nextnode/standards
 
+## 2.2.1
+
+### Patch Changes
+
+- [#25](https://github.com/NextNodeSolutions/standards/pull/25) [`1fff827`](https://github.com/NextNodeSolutions/standards/commit/1fff827c786772f8d1724c3bd5d9956cf26540aa) Thanks [@walid-mos](https://github.com/walid-mos)! - Update peer dependencies to support latest major versions:
+    - vite: ^5.0.0 || ^6.0.0 || ^7.0.0 (adds Vite 6 and 7 support)
+    - vitest: ^3.0.0 || ^4.0.0 (adds Vitest 4 support)
+
 ## 2.2.0
 
 ### Minor Changes
