@@ -1,12 +1,15 @@
+# .github/workflows/ci.yml
+# Copy this file to your repo's .github/workflows/ directory.
+# This is identical in every NextNode repo — no modifications needed.
 name: CI
 
 on:
     push:
         branches: [main]
     pull_request:
-        branches: [main]
+    workflow_dispatch:
 
 jobs:
     pipeline:
-        uses: NextNodeSolutions/infrastructure/.github/workflows/pipeline-package.yml@main
+        uses: NextNodeSolutions/infrastructure/.github/workflows/pipeline.yml@main
         secrets: inherit
