@@ -8,6 +8,16 @@ on:
         branches: [main]
     pull_request:
     workflow_dispatch:
+        inputs:
+            release_mode:
+                description: 'Release mode'
+                required: false
+                type: choice
+                default: 'none'
+                options:
+                    - none
+                    - release
+                    - canary
 
 permissions:
     contents: write
@@ -21,4 +31,6 @@ jobs:
             contents: write
             issues: write
             pull-requests: write
+        with:
+            release_mode: ${{ inputs.release_mode || 'none' }}
         secrets: inherit
