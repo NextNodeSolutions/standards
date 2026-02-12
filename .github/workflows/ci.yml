@@ -18,11 +18,6 @@ on:
                     - none
                     - release
                     - canary
-            force:
-                description: 'Force VPS recreation (destroy + recreate)'
-                required: false
-                type: boolean
-                default: false
 
 permissions:
     contents: write
@@ -38,5 +33,4 @@ jobs:
             pull-requests: write
         with:
             release_mode: ${{ inputs.release_mode || 'none' }}
-            force: ${{ inputs.force || false }}
         secrets: inherit
