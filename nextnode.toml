@@ -3,6 +3,5 @@ name = "standards"
 type = "package"
 
 [package]
-scope = "@nextnode"
 access = "public"
 canary_on_label = true
