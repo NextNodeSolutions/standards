@@ -25,9 +25,9 @@ Complete implementation of the `@nextnode/standards` package — a centralized E
 | FR-15 | Library config (strictest)                                       | done   |
 | FR-16 | Next.js config                                                   | done   |
 | FR-17 | Astro config                                                     | done   |
-| FR-18 | Tailwind preset export                                           | done   |
-| FR-19 | Brand-agnostic preset with container defaults                    | done   |
-| FR-20 | ESM import support for consuming projects                        | done   |
+| FR-18 | Tailwind CSS theme export (v4 CSS-first)                         | done   |
+| FR-19 | Brand-agnostic theme with xs breakpoint                          | done   |
+| FR-20 | CSS @import support for consuming projects                       | done   |
 | FR-21 | 2 Vitest configs with dual exports                               | done   |
 | FR-22 | Frontend Vitest config (jsdom)                                   | done   |
 | FR-23 | Backend Vitest config (node)                                     | done   |
@@ -60,7 +60,7 @@ Complete implementation of the `@nextnode/standards` package — a centralized E
 - `src/typescript/tsconfig.library.json`
 - `src/typescript/tsconfig.nextjs.json`
 - `src/typescript/tsconfig.astro.json`
-- `src/tailwind/preset.js`
+- `src/tailwind/theme.css`
 - `src/vitest/vitest.frontend.js`
 - `src/vitest/vitest.frontend.d.ts`
 - `src/vitest/vitest.backend.js`

@@ -99,13 +99,16 @@ The existing `@nextnode/standards` package (v2.2.1) uses Biome for linting and P
     - Full strict mode + `noUncheckedIndexedAccess`, `noImplicitOverride`
     - `noEmit`: true
 
-### Tailwind CSS Preset
+### Tailwind CSS Theme (v4 CSS-first)
 
-- **FR-18**: Export a minimal Tailwind preset at `@nextnode/standards/tailwind` (`src/tailwind/preset.js`).
-- **FR-19**: The preset is brand-agnostic — no NextNode colors or fonts. It provides:
-    - Sensible default extensions (e.g., container center, default padding)
-    - Any commonly needed plugins setup
-- **FR-20**: Consuming projects use it via `presets: [require('@nextnode/standards/tailwind')]` or ESM import in their `tailwind.config.ts`.
+- **FR-18**: Export a CSS theme file at `@nextnode/standards/tailwind` (`src/tailwind/theme.css`).
+- **FR-19**: The theme is brand-agnostic — no NextNode colors or fonts. It provides:
+    - `--breakpoint-xs: 30rem` (extra-small breakpoint for mobile-first layouts)
+- **FR-20**: Consuming projects import it in their main CSS file:
+    ```css
+    @import 'tailwindcss';
+    @import '@nextnode-solutions/standards/tailwind';
+    ```
 
 ### Vitest Configurations
 
@@ -155,7 +158,7 @@ The existing `@nextnode/standards` package (v2.2.1) uses Biome for linting and P
     	"./typescript/library": "./src/typescript/tsconfig.library.json",
     	"./typescript/nextjs": "./src/typescript/tsconfig.nextjs.json",
     	"./typescript/astro": "./src/typescript/tsconfig.astro.json",
-    	"./tailwind": "./src/tailwind/preset.js",
+    	"./tailwind": "./src/tailwind/theme.css",
     	"./vitest/frontend": {
     		"types": "./src/vitest/vitest.frontend.d.ts",
     		"default": "./src/vitest/vitest.frontend.js"

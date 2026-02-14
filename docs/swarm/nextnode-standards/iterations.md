@@ -14,7 +14,7 @@
 - `src/typescript/tsconfig.library.json` — strictest TS config (FR-14, FR-15)
 - `src/typescript/tsconfig.nextjs.json` — Next.js TS config (FR-14, FR-16)
 - `src/typescript/tsconfig.astro.json` — Astro TS config (FR-14, FR-17)
-- `src/tailwind/preset.js` — brand-agnostic Tailwind preset (FR-18 to FR-20)
+- `src/tailwind/theme.css` — brand-agnostic Tailwind v4 CSS theme (FR-18 to FR-20)
 - `src/vitest/vitest.frontend.js` + `.d.ts` — frontend Vitest config (FR-21, FR-22)
 - `src/vitest/vitest.backend.js` + `.d.ts` — backend Vitest config (FR-21, FR-23)
 - `src/commitlint/base.js` — commitlint config (FR-24, FR-25)
